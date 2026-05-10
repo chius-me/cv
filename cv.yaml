@@ -1,0 +1,111 @@
+cv:
+  name: Yao Chius
+  location: City, Country
+  email: yao.chius@example.com
+  phone: tel:+1-650-253-0000
+  website: https://example.com
+  social_networks:
+    - network: GitHub
+      username: yao-chius
+    - network: LinkedIn
+      username: yao-chius
+  sections:
+    education:
+      - institution: Example University
+        area: Computer Science
+        degree: M.S.
+        location: City, Country
+        start_date: 2024-09
+        end_date: 2026-06
+        highlights:
+          - "Research focus: distributed systems, reproducible infrastructure, and developer tooling."
+          - "Relevant coursework: Advanced Operating Systems, Machine Learning, Research Methods."
+    research_experience:
+      - company: Systems Research Lab, Example University
+        position: Research Assistant
+        location: City, Country
+        start_date: 2024-09
+        end_date: present
+        highlights:
+          - "Designed experiments for evaluating build-system performance across heterogeneous workloads."
+          - "Built reproducible analysis notebooks and summarized results for weekly research meetings."
+          - "Collaborated with two graduate students to prepare an internal technical report."
+    publications:
+      - title: "A Placeholder Study on Reproducible Developer Infrastructure"
+        authors:
+          - Yao Chius
+          - Alex Example
+          - Casey Researcher
+        doi: 10.0000/example.2026.001
+        date: 2026-05
+        journal: Proceedings of the Example Systems Workshop
+    projects:
+      - name: Research Artifact Template
+        date: 2025
+        highlights:
+          - "Created a template repository for packaging datasets, scripts, and experiment metadata."
+          - "Documented setup steps so another researcher could reproduce results from a clean machine."
+      - name: Literature Review Tracker
+        date: 2024
+        highlights:
+          - "Organized paper notes by topic, method, dataset, and open research question."
+          - "Used structured summaries to compare assumptions across related systems papers."
+    skills:
+      - label: Research
+        details: Literature review, experiment design, technical writing, reproducibility
+      - label: Programming
+        details: Python, Bash, Git, LaTeX, SQL
+      - label: Tools
+        details: Linux, Docker, Jupyter, CI/CD, RenderCV
+
+design:
+  theme: classic
+  page:
+    size: us-letter
+    top_margin: 2cm
+    bottom_margin: 2cm
+    left_margin: 2cm
+    right_margin: 2cm
+  colors:
+    text: "#111111"
+    name: "#111111"
+    connections: "#333333"
+    section_titles: "#111111"
+    links: "#004f9f"
+  text:
+    font_family: New Computer Modern
+    font_size: 10pt
+    leading: 0.6em
+  links:
+    underline: false
+    use_external_link_icon: true
+  header:
+    name_font_size: 24pt
+    name_bold: true
+    photo_width: 3.5cm
+    vertical_space_between_name_and_connections: 0.7cm
+  section_titles:
+    type: with-full-line
+    font_size: 1.2em
+    bold: true
+    vertical_space_above: 0.55cm
+    vertical_space_below: 0.25cm
+  entries:
+    date_and_location_width: 4.15cm
+    left_and_right_margin: 0.2cm
+    horizontal_space_between_columns: 0.12cm
+    vertical_space_between_entries: 0.25cm
+    allow_page_break_in_sections: true
+    allow_page_break_in_entries: true
+  highlights:
+    bullet: "-"
+    top_margin: 0.12cm
+    left_margin: 0.35cm
+    vertical_space_between_highlights: 0.08cm
+
+rendercv_settings:
+  render_command:
+    output_folder_name: rendercv_output
+    dont_generate_html: false
+    dont_generate_markdown: false
+    dont_generate_png: true

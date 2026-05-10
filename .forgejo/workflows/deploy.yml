@@ -1,0 +1,36 @@
+name: Deploy CV to Cloudflare Pages
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    runs-on: node
+    env:
+      CLOUDFLARE_API_TOKEN: ${{ secrets.CV_DEPLOY_CLOUDFLAREPAGE }}
+      CLOUDFLARE_ACCOUNT_ID: ${{ vars.CLOUDFLARE_ACCOUNT_ID }}
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Install Python build dependencies
+        run: |
+          apt-get update
+          apt-get install -y --no-install-recommends python3 python3-venv python3-pip
+
+      - name: Render CV
+        run: |
+          python3 -m venv .venv
+          . .venv/bin/activate
+          python -m pip install --upgrade pip
+          python -m pip install "rendercv[full]"
+          rendercv render cv.yaml
+
+      - name: Install Wrangler
+        run: npm install -g wrangler
+
+      - name: Deploy to Cloudflare Pages
+        run: wrangler pages deploy rendercv_output --project-name=cv
