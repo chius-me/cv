@@ -22,12 +22,18 @@ jobs:
         
       - name: Install RenderCV & Build
         run: |
-          # 1. 换成国内清华源，解决 pip 下载慢的问题
+          # 1. 创建一个完全隔离的虚拟环境，起名叫 .venv
+          python3 -m venv .venv
+          
+          # 2. 激活虚拟环境
+          # 激活后，所有的 pip 安装都会进到 .venv 目录里，绝不触碰系统文件，也就不再报错
+          source .venv/bin/activate
+          
+          # 3. 在虚拟环境里换源并安装 (这里不需要 --break-system-packages 了)
           pip config set global.index-url https://pypi.tuna.tsinghua.edu.cn/simple
+          pip install "rendercv[full]"
           
-          pip3 install "rendercv[full]" --break-system-packages
-          
-          # 3. 渲染
+          # 4. 执行渲染
           rendercv render cv.yaml
           
       - name: Deploy to Cloudflare Pages
