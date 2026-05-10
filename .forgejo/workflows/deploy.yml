@@ -23,7 +23,7 @@ jobs:
       - name: 🐍 Set up Python 3.12 & Cache
         uses: actions/setup-python@v5
         with:
-          python-version: '3.12'
+          python-version: '3.12.3'
           cache: 'pip' # 自动缓存 pip 依赖，第二次跑就会极速秒过
 
       - name: 🛠️ Install RenderCV & Build
