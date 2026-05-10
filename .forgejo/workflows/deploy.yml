@@ -16,21 +16,20 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Install Python build dependencies
-        run: |
-          apt-get update
-          apt-get install -y --no-install-recommends python3 python3-venv python3-pip
+      # 优化 1：使用 setup-python 自动安装 Python 并开启 pip 缓存
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12' 
+          cache: 'pip' # 魔法指令：自动缓存 ~/.cache/pip
 
-      - name: Render CV
+      # 优化 2：去掉了冗长的 apt-get 和 venv，直接无脑 install
+      - name: Install RenderCV & Build
         run: |
-          python3 -m venv .venv
-          . .venv/bin/activate
           python -m pip install --upgrade pip
-          python -m pip install "rendercv[full]"
+          pip install "rendercv[full]"
           rendercv render cv.yaml
 
-      - name: Install Wrangler
-        run: npm install -g wrangler
-
+      # 优化 3：废弃 npm install -g，使用 npx 实时调用并利用 npm 的默认缓存机制
       - name: Deploy to Cloudflare Pages
-        run: wrangler pages deploy rendercv_output --project-name=cv
+        run: npx wrangler pages deploy rendercv_output --project-name=cv
