@@ -4,32 +4,34 @@ on:
   push:
     branches:
       - main
-  workflow_dispatch:
+    paths:
+      - 'cv.yaml'     # 只有当简历源文件修改时才触发发布，避免改一下 README 也乱跑
+      - '.forgejo/**'
+  workflow_dispatch:  # 保留手动触发按钮，方便调试
 
 jobs:
   deploy:
-    runs-on: ubuntu
+    runs-on: ubuntu-latest # 使用你刚换的官方全能镜像
     env:
       CLOUDFLARE_API_TOKEN: ${{ secrets.CV_DEPLOY_CLOUDFLAREPAGE }}
       CLOUDFLARE_ACCOUNT_ID: ${{ vars.CLOUDFLARE_ACCOUNT_ID }}
+      
     steps:
-      - name: Checkout repository
+      - name: 📦 Checkout repository
         uses: actions/checkout@v4
 
-      # 优化 1：使用 setup-python 自动安装 Python 并开启 pip 缓存
-      - name: Set up Python
+      - name: 🐍 Set up Python 3.12 & Cache
         uses: actions/setup-python@v5
         with:
-          python-version: '3.12' 
-          cache: 'pip' # 魔法指令：自动缓存 ~/.cache/pip
+          python-version: '3.12'
+          cache: 'pip' # 自动缓存 pip 依赖，第二次跑就会极速秒过
 
-      # 优化 2：去掉了冗长的 apt-get 和 venv，直接无脑 install
-      - name: Install RenderCV & Build
+      - name: 🛠️ Install RenderCV & Build
         run: |
           python -m pip install --upgrade pip
           pip install "rendercv[full]"
           rendercv render cv.yaml
-
-      # 优化 3：废弃 npm install -g，使用 npx 实时调用并利用 npm 的默认缓存机制
-      - name: Deploy to Cloudflare Pages
+          
+      # ubuntu-latest 镜像自带 Node.js 环境，所以我们连 setup-node 都省了
+      - name: 🚀 Deploy to Cloudflare Pages
         run: npx wrangler pages deploy rendercv_output --project-name=cv
