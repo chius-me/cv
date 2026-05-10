@@ -21,6 +21,9 @@ jobs:
       CLOUDFLARE_ACCOUNT_ID: ${{ vars.CLOUDFLARE_ACCOUNT_ID }}
       CLOUDFLARE_PROJECT_NAME: cv
       PIP_DISABLE_PIP_VERSION_CHECK: "1"
+      PIP_INDEX_URL: https://pypi.tuna.tsinghua.edu.cn/simple
+      PIP_PROGRESS_BAR: "off"
+      NPM_CONFIG_REGISTRY: https://registry.npmmirror.com
 
     steps:
       - name: Checkout repository
@@ -43,8 +46,7 @@ jobs:
           set -euo pipefail
           python3 -m venv .venv
           . .venv/bin/activate
-          python -m pip install --upgrade pip
-          python -m pip install "rendercv[full]"
+          python -m pip install --prefer-binary "rendercv[full]"
 
       - name: Render CV
         run: |
