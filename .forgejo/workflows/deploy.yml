@@ -11,7 +11,7 @@ on:
 
 jobs:
   deploy:
-    runs-on: ubuntu-latest # 使用你刚换的官方全能镜像
+    runs-on: ubuntu # 使用你刚换的官方全能镜像
     env:
       CLOUDFLARE_API_TOKEN: ${{ secrets.CV_DEPLOY_CLOUDFLAREPAGE }}
       CLOUDFLARE_ACCOUNT_ID: ${{ vars.CLOUDFLARE_ACCOUNT_ID }}
