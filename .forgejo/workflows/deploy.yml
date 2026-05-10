@@ -54,59 +54,23 @@ jobs:
           . .venv/bin/activate
           rendercv render cv.yaml
 
-      - name: Prepare static format routes
+      - name: Prepare root PDF page
         run: |
           set -euo pipefail
-          cp rendercv_output/Yao_Chius_CV.html rendercv_output/index.html
-          mkdir -p rendercv_output/pdf rendercv_output/md rendercv_output/typ
-          cat > rendercv_output/pdf/index.html <<'HTML'
+          cat > rendercv_output/index.html <<'HTML'
           <!doctype html>
           <html lang="en">
             <head>
               <meta charset="utf-8">
               <meta name="viewport" content="width=device-width, initial-scale=1">
-              <title>Yao Chius CV PDF</title>
+              <title>Yao Chius CV</title>
               <style>
                 html, body { height: 100%; margin: 0; }
                 iframe { border: 0; height: 100%; width: 100%; }
               </style>
             </head>
             <body>
-              <iframe src="../Yao_Chius_CV.pdf" title="Yao Chius CV PDF"></iframe>
-            </body>
-          </html>
-          HTML
-          cat > rendercv_output/md/index.html <<'HTML'
-          <!doctype html>
-          <html lang="en">
-            <head>
-              <meta charset="utf-8">
-              <meta name="viewport" content="width=device-width, initial-scale=1">
-              <title>Yao Chius CV Markdown</title>
-              <style>
-                html, body { height: 100%; margin: 0; }
-                iframe { border: 0; height: 100%; width: 100%; }
-              </style>
-            </head>
-            <body>
-              <iframe src="../Yao_Chius_CV.md" title="Yao Chius CV Markdown"></iframe>
-            </body>
-          </html>
-          HTML
-          cat > rendercv_output/typ/index.html <<'HTML'
-          <!doctype html>
-          <html lang="en">
-            <head>
-              <meta charset="utf-8">
-              <meta name="viewport" content="width=device-width, initial-scale=1">
-              <title>Yao Chius CV Typst</title>
-              <style>
-                html, body { height: 100%; margin: 0; }
-                iframe { border: 0; height: 100%; width: 100%; }
-              </style>
-            </head>
-            <body>
-              <iframe src="../Yao_Chius_CV.typ" title="Yao Chius CV Typst"></iframe>
+              <iframe src="Yao_Chius_CV.pdf" title="Yao Chius CV"></iframe>
             </body>
           </html>
           HTML
