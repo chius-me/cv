@@ -1,15 +1,14 @@
 # yaml-language-server: $schema=https://raw.githubusercontent.com/rendercv/rendercv/refs/tags/v2.8/schema.json
 cv:
   name: Yao Chius
-  location: City, Country
-  email: yao.chius@example.com
-  phone: tel:+1-650-253-0000
-  website: https://example.com
+  location: QingDao ShangDong
+  email: contact@chius.cc
+  phone: tel:+86-17667520395 
+  blog: https://blog.chius.cc/
+  gotosocial: https://social.chiuc.cc/@chius
   social_networks:
     - network: GitHub
-      username: yao-chius
-    - network: LinkedIn
-      username: yao-chius
+      username: chius-me
   sections:
     education:
       - institution: Example University
