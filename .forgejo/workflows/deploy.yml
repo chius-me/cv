@@ -5,36 +5,58 @@ on:
     branches:
       - main
     paths:
-      - 'cv.yaml'     # 只有当简历源文件修改时才触发发布，避免改一下 README 也乱跑
-      - '.forgejo/**'
-  workflow_dispatch:  # 保留手动触发按钮，方便调试
+      - cv.yaml
+      - .forgejo/workflows/deploy.yml
+  workflow_dispatch:
+
+defaults:
+  run:
+    shell: bash
 
 jobs:
   deploy:
-    runs-on: ubuntu # 使用你刚换的官方全能镜像
+    runs-on: ubuntu
     env:
       CLOUDFLARE_API_TOKEN: ${{ secrets.CV_DEPLOY_CLOUDFLAREPAGE }}
       CLOUDFLARE_ACCOUNT_ID: ${{ vars.CLOUDFLARE_ACCOUNT_ID }}
-      
+      CLOUDFLARE_PROJECT_NAME: cv
+      PIP_DISABLE_PIP_VERSION_CHECK: "1"
+
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
-        
-      - name: Install RenderCV & Build
+
+      - name: Validate Cloudflare configuration
         run: |
-          # 1. 创建一个完全隔离的虚拟环境，起名叫 .venv
+          set -euo pipefail
+          test -n "${CLOUDFLARE_API_TOKEN:-}" || { echo "Missing CV_DEPLOY_CLOUDFLAREPAGE secret"; exit 1; }
+          test -n "${CLOUDFLARE_ACCOUNT_ID:-}" || { echo "Missing CLOUDFLARE_ACCOUNT_ID variable"; exit 1; }
+
+      - name: Install system dependencies
+        run: |
+          set -euo pipefail
+          apt-get update
+          apt-get install -y --no-install-recommends python3 python3-pip python3-venv
+
+      - name: Install RenderCV
+        run: |
+          set -euo pipefail
           python3 -m venv .venv
-          
-          # 2. 激活虚拟环境
-          # 激活后，所有的 pip 安装都会进到 .venv 目录里，绝不触碰系统文件，也就不再报错
-          source .venv/bin/activate
-          
-          # 3. 在虚拟环境里换源并安装 (这里不需要 --break-system-packages 了)
-          pip config set global.index-url https://pypi.tuna.tsinghua.edu.cn/simple
-          pip install "rendercv[full]"
-          
-          # 4. 执行渲染
+          . .venv/bin/activate
+          python -m pip install --upgrade pip
+          python -m pip install "rendercv[full]"
+
+      - name: Render CV
+        run: |
+          set -euo pipefail
+          . .venv/bin/activate
           rendercv render cv.yaml
-          
+
+      - name: Install Wrangler
+        run: npm install -g wrangler@latest
+
       - name: Deploy to Cloudflare Pages
-        run: npx wrangler pages deploy rendercv_output --project-name=cv
+        run: |
+          set -euo pipefail
+          branch="${GITHUB_REF_NAME:-${GITHUB_REF##*/}}"
+          wrangler pages deploy rendercv_output --project-name="$CLOUDFLARE_PROJECT_NAME" --branch="$branch"
