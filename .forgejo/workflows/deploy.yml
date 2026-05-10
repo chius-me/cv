@@ -25,8 +25,6 @@ jobs:
           # 1. 换成国内清华源，解决 pip 下载慢的问题
           pip config set global.index-url https://pypi.tuna.tsinghua.edu.cn/simple
           
-          # 2. 强行安装，--break-system-packages 专治 PEP668 报错
-          python3 -m pip install --upgrade pip --break-system-packages
           pip3 install "rendercv[full]" --break-system-packages
           
           # 3. 渲染
