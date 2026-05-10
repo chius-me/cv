@@ -17,21 +17,20 @@ jobs:
       CLOUDFLARE_ACCOUNT_ID: ${{ vars.CLOUDFLARE_ACCOUNT_ID }}
       
     steps:
-      - name: 📦 Checkout repository
+      - name: Checkout repository
         uses: actions/checkout@v4
-
-      - name: 🐍 Set up Python 3.12.3 & Cache
-        uses: actions/setup-python@v5
-        with:
-          python-version: '3.12.3'
-          cache: 'pip' # 自动缓存 pip 依赖，第二次跑就会极速秒过
-
-      - name: 🛠️ Install RenderCV & Build
+        
+      - name: Install RenderCV & Build
         run: |
-          python -m pip install --upgrade pip
-          pip install "rendercv[full]"
+          # 1. 换成国内清华源，解决 pip 下载慢的问题
+          pip config set global.index-url https://pypi.tuna.tsinghua.edu.cn/simple
+          
+          # 2. 强行安装，--break-system-packages 专治 PEP668 报错
+          python3 -m pip install --upgrade pip --break-system-packages
+          pip3 install "rendercv[full]" --break-system-packages
+          
+          # 3. 渲染
           rendercv render cv.yaml
           
-      # ubuntu-latest 镜像自带 Node.js 环境，所以我们连 setup-node 都省了
-      - name: 🚀 Deploy to Cloudflare Pages
+      - name: Deploy to Cloudflare Pages
         run: npx wrangler pages deploy rendercv_output --project-name=cv
