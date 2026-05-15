@@ -1,0 +1,7 @@
+name = "cv"
+main = "src/worker.js"
+compatibility_date = "2026-05-15"
+
+[assets]
+directory = "rendercv_output"
+binding = "ASSETS"
