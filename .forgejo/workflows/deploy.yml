@@ -17,7 +17,7 @@ defaults:
 
 jobs:
   deploy:
-    runs-on: ubuntu
+    runs-on: cloudflare
     env:
       CLOUDFLARE_API_TOKEN: ${{ secrets.CV_DEPLOY_CLOUDFLAREPAGE }}
       CLOUDFLARE_ACCOUNT_ID: ${{ vars.CLOUDFLARE_ACCOUNT_ID }}
