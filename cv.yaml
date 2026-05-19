@@ -6,14 +6,16 @@ cv:
   social_networks:
     - network: GitHub
       username: chius-me
+    - network: LinkedIn
+      username: chius-me
   sections:
     education:
-      - institution: Example University
+      - institution: China University of Petroleum
         area: Computer Science
-        degree: M.S.
-        location: City, Country
-        start_date: 2024-09
-        end_date: 2026-06
+        degree: B.S.E.
+        location: Qingdao, China
+        start_date: 2023-09
+        end_date: present
         highlights:
           - "Research focus: distributed systems, reproducible infrastructure, and developer tooling."
           - "Relevant coursework: Advanced Operating Systems, Machine Learning, Research Methods."
@@ -54,6 +56,10 @@ cv:
         details: Python, Bash, Git, LaTeX, SQL
       - label: Tools
         details: Linux, Docker, Jupyter, CI/CD, RenderCV
+    e_card:
+      - "```bash"
+      - "$ curl whoami.chius.cc"
+      - "```"
 
 design:
   theme: classic

@@ -8,7 +8,7 @@ on:
       - cv.yaml
       - wrangler.toml
       - src/**
-      - .forgejo/workflows/deploy.yml
+      - .github/workflows/deploy.yml
   workflow_dispatch:
 
 defaults:
@@ -17,15 +17,13 @@ defaults:
 
 jobs:
   deploy:
-    runs-on: ubuntu
+    runs-on: ubuntu-latest
     env:
       CLOUDFLARE_API_TOKEN: ${{ secrets.CV_DEPLOY_CLOUDFLAREPAGE }}
       CLOUDFLARE_ACCOUNT_ID: ${{ vars.CLOUDFLARE_ACCOUNT_ID }}
       CLOUDFLARE_WORKER_NAME: cv
       PIP_DISABLE_PIP_VERSION_CHECK: "1"
-      PIP_INDEX_URL: https://pypi.tuna.tsinghua.edu.cn/simple
       PIP_PROGRESS_BAR: "off"
-      NPM_CONFIG_REGISTRY: https://registry.npmmirror.com
 
     steps:
       - name: Checkout repository
@@ -42,12 +40,6 @@ jobs:
         with:
           path: .venv
           key: venv-${{ runner.os }}-rendercv-full-2.8
-
-      - name: Install system dependencies
-        run: |
-          set -euo pipefail
-          apt-get update
-          apt-get install -y --no-install-recommends python3 python3-pip python3-venv
 
       - name: Install RenderCV
         run: |
@@ -85,10 +77,15 @@ jobs:
           </html>
           HTML
 
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+
       - name: Cache Wrangler
         uses: actions/cache@v4
         with:
-          path: /usr/local/lib/node_modules/wrangler
+          path: ~/.npm
           key: wrangler-${{ runner.os }}-latest
 
       - name: Install Wrangler

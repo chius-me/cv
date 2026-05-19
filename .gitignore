@@ -1,9 +1,5 @@
-# 忽略 RenderCV 的所有生成产物
 rendercv_output/
 
-# 忽略可能产生的临时缓存文件
 .cache/
 __pycache__/
-.superpowers/
-.worktrees/
-docs/
+.wrangler
