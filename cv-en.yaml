@@ -67,7 +67,7 @@ locale:
   language: english
 
 design:
-  theme: engineeringclassic
+  theme: engineeringresumes
 
 settings:
   render_command:

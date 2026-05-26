@@ -90,7 +90,7 @@ locale:
   language: mandarin_chinese
 
 design:
-  theme: engineeringclassic
+  theme: engineeringresumes
   typography:
     font_family:
       body: "Noto Sans CJK SC"
