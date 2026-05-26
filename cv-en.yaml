@@ -64,6 +64,8 @@ cv:
         details: Shell, Go, Python, C, JavaScript
       - label: Dev Tools
         details: Git, Docker, CI/CD, Jupyter
+      - label: AI Agent
+        details: opencode, Hermes Agent, Multica, Codex
       - label: Systems
         details: Linux, Proxmox VE
       - label: Languages
