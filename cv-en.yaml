@@ -15,7 +15,7 @@ cv:
     - fontawesome_icon: linkedin
       placeholder: LinkedIn
       url: https://linkedin.com/in/chius-me
-    - fontawesome_icon: blog
+    - fontawesome_icon: pen-nib
       placeholder: Blog
       url: https://blog.chius.cc/
   sections:

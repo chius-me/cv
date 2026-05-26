@@ -9,15 +9,15 @@ cv:
     - fontawesome_icon: link
       placeholder: "chius.cc"
       url: https://chius.cc/
+    - fontawesome_icon: pen-nib
+      placeholder: Blog
+      url: https://blog.chius.cc/
     - fontawesome_icon: github
       placeholder: GitHub
       url: https://github.com/chius-me
     - fontawesome_icon: linkedin
       placeholder: LinkedIn
       url: https://linkedin.com/in/chius-me
-    - fontawesome_icon: blog
-      placeholder: Blog
-      url: https://blog.chius.cc/
   sections:
     教育经历:
       - institution: 中国石油大学
