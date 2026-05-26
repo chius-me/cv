@@ -88,9 +88,6 @@ cv:
         highlights:
           - "负责后端 API 与公网反向代理部署，为 Android 客户端提供 AI 服务接口。"
 
-    "—":
-      - "基于 RenderCV 构建 · https://github.com/chius-me/cv"
-
 locale:
   language: mandarin_chinese
 

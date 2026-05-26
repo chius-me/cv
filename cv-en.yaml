@@ -88,9 +88,6 @@ cv:
         highlights:
           - "Built backend API with public reverse proxy, serving AI capabilities to an Android client."
 
-    "—":
-      - "Built with RenderCV · https://github.com/chius-me/cv"
-
 locale:
   language: english
 
