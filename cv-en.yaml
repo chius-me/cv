@@ -60,12 +60,16 @@ cv:
           - "Organized paper notes by topic, method, dataset, and open research question."
           - "Used structured summaries to compare assumptions across related systems papers."
     skills:
-      - label: Research
-        details: Literature review, experiment design, technical writing, reproducibility
       - label: Programming
-        details: Python, Bash, Git, LaTeX, SQL
-      - label: Tools
-        details: Linux, Docker, Jupyter, CI/CD, RenderCV
+        details: Shell, Go, Python, C, JavaScript
+      - label: Dev Tools
+        details: Git, Docker, CI/CD, Jupyter
+      - label: Systems
+        details: Linux, Proxmox VE
+      - label: Languages
+        details: Chinese (native), English (CET-6)
+      - label: Interests
+        details: AI agents, DevOps automation, open source, self-hosting
     e_card:
       - "```bash"
       - "$ curl whoami.chius.cc"

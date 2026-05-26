@@ -29,6 +29,36 @@ cv:
         highlights:
           - "核心课程：C/C++、计算机网络、数据结构、Linux 嵌入式、人工智能模型与算法"
 
+    技能:
+      - label: 编程语言
+        details: Shell, Go, Python, C, JavaScript
+      - label: 开发工具
+        details: Git, Docker, CI/CD, Jupyter
+      - label: 系统与平台
+        details: Linux, Proxmox VE
+      - label: 英语能力
+        details: CET-6
+      - label: 兴趣方向
+        details: AI Agent、自动化运维、开源软件、自托管程序
+
+    个人项目:
+      - name: HomeLab 网络与虚拟化平台
+        date: 2024 – present
+        highlights:
+          - "自建家庭数据中心，运行 Proxmox VE 虚拟化平台，托管十余个容器与虚拟机。"
+          - "配置完整的网络拓扑：VLAN 隔离、DNS 广告过滤、反向代理与内网穿透。"
+          - "部署 GitLab CI/CD 流水线，实现个人项目自动化构建与部署。"
+      - name: 项目二（占位，请替换）
+        date: 2024
+        highlights:
+          - "项目简介（占位，请替换）。"
+          - "技术细节（占位，请替换）。"
+      - name: 项目三（占位，请替换）
+        date: 2023
+        highlights:
+          - "项目简介（占位，请替换）。"
+          - "技术细节（占位，请替换）。"
+
     课程设计:
       - name: 课程设计一（占位，请替换）
         date: 2025-06
@@ -64,34 +94,6 @@ cv:
         highlights:
           - "比赛简介 + 个人角色（占位，请替换）。"
           - "所做工作 + 最终成绩（占位，请替换）。"
-
-    个人项目:
-      - name: HomeLab 网络与虚拟化平台
-        date: 2024 – present
-        highlights:
-          - "自建家庭数据中心，运行 Proxmox VE 虚拟化平台，托管十余个容器与虚拟机。"
-          - "配置完整的网络拓扑：VLAN 隔离、DNS 广告过滤、反向代理与内网穿透。"
-          - "部署 GitLab CI/CD 流水线，实现个人项目自动化构建与部署。"
-      - name: 项目二（占位，请替换）
-        date: 2024
-        highlights:
-          - "项目简介（占位，请替换）。"
-          - "技术细节（占位，请替换）。"
-      - name: 项目三（占位，请替换）
-        date: 2023
-        highlights:
-          - "项目简介（占位，请替换）。"
-          - "技术细节（占位，请替换）。"
-
-    技能:
-      - label: 编程语言
-        details: Python, C/C++, Bash, SQL, LaTeX
-      - label: 开发工具
-        details: Git, Docker, Linux, CI/CD, Proxmox VE, Jupyter
-      - label: 语言能力
-        details: 中文（母语）、英语（CET-4/6 占位）
-      - label: 兴趣方向
-        details: 分布式系统、自动化运维、开源软件、可复现研究
 
 locale:
   language: mandarin_chinese
