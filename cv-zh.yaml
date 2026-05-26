@@ -7,16 +7,16 @@ cv:
   email: contact@chius.cc
   custom_connections:
     - fontawesome_icon: link
-      placeholder: ""
+      placeholder: "chius.cc"
       url: https://chius.cc/
     - fontawesome_icon: github
-      placeholder: ""
+      placeholder: GitHub
       url: https://github.com/chius-me
     - fontawesome_icon: linkedin
-      placeholder: ""
+      placeholder: LinkedIn
       url: https://linkedin.com/in/chius-me
     - fontawesome_icon: blog
-      placeholder: ""
+      placeholder: Blog
       url: https://blog.chius.cc/
   sections:
     教育经历:
