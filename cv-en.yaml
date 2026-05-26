@@ -63,11 +63,13 @@ cv:
       - label: Programming
         details: Shell, Go, Python, C, JavaScript
       - label: Dev Tools
-        details: Git, Docker, CI/CD, Jupyter
+        details: Git, Docker, Jupyter
       - label: AI Agent
         details: opencode, Hermes Agent, Multica, Codex
-      - label: Systems
-        details: Linux, Proxmox VE
+      - label: Self-hosted
+        details: Linux, Proxmox VE, Forgejo
+      - label: SaaS / Platforms
+        details: AWS/GCP, Cloudflare, GitHub
       - label: Languages
         details: Chinese (native), English (CET-6)
       - label: Interests

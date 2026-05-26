@@ -33,11 +33,13 @@ cv:
       - label: 编程语言
         details: Shell, Go, Python, C, JavaScript
       - label: 开发工具
-        details: Git, Docker, GitHub Actions, Jupyter
+        details: Vim, Git, Docker, GitHub Actions
       - label: AI Agent
         details: opencode, Hermes Agent, Multica, Codex
-      - label: 系统与平台
-        details: Linux, Proxmox VE
+      - label: 自建/私有
+        details: Linux, Proxmox VE, Forgejo
+      - label: SaaS / 平台
+        details: AWS/GCP, Cloudflare, GitHub
       - label: 英语能力
         details: CET-6
       - label: 兴趣方向
