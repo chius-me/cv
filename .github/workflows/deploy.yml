@@ -43,7 +43,7 @@ jobs:
         uses: actions/cache@v4
         with:
           path: .venv
-          key: venv-${{ runner.os }}-rendercv-full-2.8
+          key: venv-${{ runner.os }}-rendercv-full-2.8-pypdf
 
       - name: Install RenderCV
         run: |
@@ -51,7 +51,7 @@ jobs:
           if [ ! -f .venv/bin/activate ]; then
             python3 -m venv .venv
             . .venv/bin/activate
-            python -m pip install --prefer-binary "rendercv[full]==2.8"
+            python -m pip install --prefer-binary "rendercv[full]==2.8" pypdf
           fi
 
       - name: Render CV
@@ -61,10 +61,16 @@ jobs:
           rendercv render cv-en.yaml
           rendercv render cv-zh.yaml --output-folder rendercv_output/zh
 
-      - name: Inject language switcher
+      - name: Annotate PDFs with lang link
         run: |
           set -euo pipefail
-          python3 scripts/inject-lang-switcher.py rendercv_output
+          . .venv/bin/activate
+          python3 scripts/annotate-pdf.py rendercv_output
+
+      - name: Generate index pages
+        run: |
+          set -euo pipefail
+          python3 scripts/bundle.py rendercv_output
 
       - name: Setup Node.js
         uses: actions/setup-node@v4
