@@ -90,6 +90,9 @@ locale:
 
 design:
   theme: engineeringresumes
+  header:
+    connections:
+      show_icons: true
   typography:
     font_family:
       body: "WenQuanYi Zen Hei"

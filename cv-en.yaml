@@ -68,6 +68,9 @@ locale:
 
 design:
   theme: engineeringresumes
+  header:
+    connections:
+      show_icons: true
 
 settings:
   render_command:
