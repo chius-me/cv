@@ -67,7 +67,7 @@ locale:
   language: english
 
 design:
-  theme: ink
+  theme: engineeringclassic
 
 settings:
   render_command:
