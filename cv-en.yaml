@@ -1,83 +1,92 @@
 # yaml-language-server: $schema=https://raw.githubusercontent.com/rendercv/rendercv/refs/tags/v2.8/schema.json
 cv:
   name: Yao Chius
-  headline: CS Undergraduate
+  headline: Communication Engineering Undergraduate · Developer · HomeLabber · Linux Enthusiast
   photo: avatar-circle.png
-  location: QingDao ShangDong
   email: contact@chius.cc
   custom_connections:
     - fontawesome_icon: link
       placeholder: "chius.cc"
       url: https://chius.cc/
+    - fontawesome_icon: pen-nib
+      placeholder: Blog
+      url: https://blog.chius.cc/
     - fontawesome_icon: github
       placeholder: GitHub
       url: https://github.com/chius-me
     - fontawesome_icon: linkedin
       placeholder: LinkedIn
       url: https://linkedin.com/in/chius-me
-    - fontawesome_icon: pen-nib
-      placeholder: Blog
-      url: https://blog.chius.cc/
   sections:
     education:
       - institution: China University of Petroleum
-        area: Computer Science
-        degree: B.S.E.
+        area: Communication Engineering
+        degree: B.E.
         location: Qingdao, China
         start_date: 2023-09
         end_date: present
         highlights:
-          - "Research focus: distributed systems, reproducible infrastructure, and developer tooling."
-          - "Relevant coursework: Advanced Operating Systems, Machine Learning, Research Methods."
-    research_experience:
-      - company: Systems Research Lab, Example University
-        position: Research Assistant
-        location: City, Country
-        start_date: 2024-09
-        end_date: present
-        highlights:
-          - "Designed experiments for evaluating build-system performance across heterogeneous workloads."
-          - "Built reproducible analysis notebooks and summarized results for weekly research meetings."
-          - "Collaborated with two graduate students to prepare an internal technical report."
-    publications:
-      - title: "A Placeholder Study on Reproducible Developer Infrastructure"
-        authors:
-          - Yao Chius
-          - Alex Example
-          - Casey Researcher
-        doi: 10.0000/example.2026.001
-        date: 2026-05
-        journal: Proceedings of the Example Systems Workshop
-    projects:
-      - name: Research Artifact Template
-        date: 2025
-        highlights:
-          - "Created a template repository for packaging datasets, scripts, and experiment metadata."
-          - "Documented setup steps so another researcher could reproduce results from a clean machine."
-      - name: Literature Review Tracker
-        date: 2024
-        highlights:
-          - "Organized paper notes by topic, method, dataset, and open research question."
-          - "Used structured summaries to compare assumptions across related systems papers."
+          - "Core coursework: C/C++, Computer Networks, Data Structures, Embedded Linux, AI Models & Algorithms"
+
     skills:
       - label: Programming
         details: Shell, Go, Python, C, JavaScript
       - label: Dev Tools
-        details: Git, Docker, Jupyter
+        details: Vim, Git, Docker, GitHub Actions
       - label: AI Agent
         details: opencode, Hermes Agent, Multica, Codex
       - label: Self-hosted
-        details: Linux, Forgejo, Forgejo Actions, ArgoCD, Kubernetes, Proxmox VE
-      - label: SaaS / Platforms
-        details: AWS/GCP, Cloudflare, GitHub
+        details: Forgejo, ArgoCD, Kubernetes, Proxmox VE, TrueNAS
+      - label: SaaS
+        details: GitHub, Cloudflare, AWS/GCP/Alibaba Cloud
       - label: Languages
         details: Chinese (native), English (CET-6)
       - label: Interests
-        details: AI agents, DevOps automation, open source, self-hosting
-    e_card:
-      - "```bash"
-      - "$ curl whoami.chius.cc"
-      - "```"
+        details: DevOps automation, open source, self-hosting
+
+    projects:
+      - name: HomeLab Hybrid Cloud Platform
+        date: 2024 – present
+        highlights:
+          - "Built a home data center on Proxmox VE, running 20+ VMs and 100+ containers."
+          - "Connected mobile devices, HomeLab, AWS, and Alibaba Cloud via WireGuard VPN; exposed services through Cloudflare."
+          - "Configured TrueNAS with ZFS RAIDZ1 for data safety, deployed MinIO for S3-compatible object storage."
+          - "Used Forgejo as internal Git hub; Forgejo Actions + ArgoCD on Kubernetes for GitOps CD pipelines."
+      - name: AI OPC Series (One-Person Company)
+        highlights:
+          - 'Deployed a Hermes Agent cluster (3 agents) on the internal network, each responsible for daily Q&A/experiments, article writing, and project development — automating personal workflows with AI.'
+          - 'Built Multica, a multi-agent framework using opencode as runtime, assembling skill-based role agents into a virtual dev team that collaboratively completes projects. — #link("https://multica.lan.tamochi.cn/")[site]'
+      - name: Serverless Series
+        highlights:
+          - 'uptime-worker: Serverless service health monitoring — #link("https://github.com/chius-me/uptime-worker")[repo]'
+          - 'favicon-fisher: Favicon fetching and recognition service — #link("https://github.com/chius-me/favicon-fisher")[repo]'
+          - 'whoami: curl whoami.chius.cc terminal business card — #link("https://github.com/chius-me/whoami")[repo]'
+          - 'cv: This résumé, built with RenderCV — #link("https://github.com/chius-me/cv")[repo]'
+          - 'hugo: Personal blog built with Hugo, dynamically loading Memos and Fediverse content — #link("https://github.com/chius-me/hugo")[repo]'
+      - name: CI/CD Container Images
+        highlights:
+          - 'cloudflare-deploy: Node container preloaded with wrangler — #link("https://github.com/chius-me/cloudflare-deploy")[repo]'
+          - 'alpine-pro: Enhanced Alpine image for Forgejo CI/CD tasks — #link("https://github.com/chius-me/alpine-pro")[repo]'
+
+    competitions:
+      - name: National College IC Innovation & Entrepreneurship Competition (Suaneng Cup)
+        date: 2026
+        highlights:
+          - 'Project "Globi-V": an AMP real-time feedback cane for the visually impaired. Team lead, responsible for AI model training, edge deployment, and Flutter client development.'
+      - name: College Student Innovation & Entrepreneurship Competition
+        date: "2024 – 2026"
+        highlights:
+          - 'Project "FPGA-based Audio Processing System Design and Implementation". Team lead, responsible for feature development and documentation.'
+
+    coursework:
+      - name: SpringBoot + Vue Web Application
+        date: 2024-07
+        highlights:
+          - "Independently designed and deployed a full-stack warehouse management system."
+      - name: Flask + Kotlin Mobile AI Application
+        date: 2025-07
+        highlights:
+          - "Built backend API with public reverse proxy, serving AI capabilities to an Android client."
 
 locale:
   language: english
