@@ -37,13 +37,13 @@ cv:
       - label: AI Agent
         details: opencode, Hermes Agent, Multica, Codex
       - label: 自建/私有
-        details: Linux, Proxmox VE, Forgejo
-      - label: SaaS / 平台
-        details: AWS/GCP, Cloudflare, GitHub
+        details: Forgejo, Forgejo Actions, ArgoCD, Kubernetes, Proxmox VE, TrueNAS
+      - label: SaaS
+        details: GitHub, Cloudflare, AWS/GCP/阿里云
       - label: 英语能力
         details: CET-6
       - label: 兴趣方向
-        details: AI Agent、自动化运维、开源软件、自托管程序
+        details: 自动化运维、开源软件、自托管程序
 
     个人项目:
       - name: HomeLab 网络与虚拟化平台

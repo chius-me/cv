@@ -67,7 +67,7 @@ cv:
       - label: AI Agent
         details: opencode, Hermes Agent, Multica, Codex
       - label: Self-hosted
-        details: Linux, Proxmox VE, Forgejo
+        details: Linux, Forgejo, Forgejo Actions, ArgoCD, Kubernetes, Proxmox VE
       - label: SaaS / Platforms
         details: AWS/GCP, Cloudflare, GitHub
       - label: Languages
