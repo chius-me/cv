@@ -1,9 +1,9 @@
 # yaml-language-server: $schema=https://raw.githubusercontent.com/rendercv/rendercv/refs/tags/v2.8/schema.json
 cv:
   name: Yao Chius
-  headline: 通信工程本科生 · 软件开发者
+  headline: 通信工程本科生 · 软件开发者 · HomeLabber · Linux 狂热爱好者
   photo: avatar-circle.png
-  location: 山东青岛
+  location: 山东 青岛
   email: contact@chius.cc
   social_networks:
     - network: GitHub
@@ -19,8 +19,7 @@ cv:
         start_date: 2023-09
         end_date: present
         highlights:
-          - "GPA: 3.5/4.0（占位，请替换）"
-          - "核心课程：信号与系统、数字信号处理、通信原理、计算机网络、数据结构、操作系统"
+          - "核心课程：C/C++、计算机网络、数据结构、Linux 嵌入式、人工智能模型与算法"
 
     课程设计:
       - name: 课程设计一（占位，请替换）
@@ -93,11 +92,11 @@ design:
   theme: engineeringresumes
   typography:
     font_family:
-      body: "Noto Sans CJK SC"
-      name: "Noto Sans CJK SC"
-      headline: "Noto Sans CJK SC"
-      connections: "Noto Sans CJK SC"
-      section_titles: "Noto Sans CJK SC"
+      body: "WenQuanYi Zen Hei"
+      name: "WenQuanYi Zen Hei"
+      headline: "WenQuanYi Zen Hei"
+      connections: "WenQuanYi Zen Hei"
+      section_titles: "WenQuanYi Zen Hei"
 
 settings:
   render_command:
