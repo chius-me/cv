@@ -5,11 +5,16 @@ cv:
   photo: avatar-circle.png
   location: QingDao ShangDong
   email: contact@chius.cc
+  website: https://chius.cc/
   social_networks:
     - network: GitHub
       username: chius-me
     - network: LinkedIn
       username: chius-me
+  custom_connections:
+    - fontawesome_icon: blog
+      placeholder: "blog.chius.cc"
+      url: https://blog.chius.cc/
   sections:
     education:
       - institution: China University of Petroleum
