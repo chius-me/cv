@@ -7,7 +7,6 @@ on:
     paths:
       - cv-en.yaml
       - cv-zh.yaml
-      - scripts/**
       - wrangler.toml
       - src/**
       - .github/workflows/deploy.yml
@@ -60,11 +59,6 @@ jobs:
           . .venv/bin/activate
           rendercv render cv-en.yaml
           rendercv render cv-zh.yaml --output-folder rendercv_output/zh
-
-      - name: Generate index pages
-        run: |
-          set -euo pipefail
-          python3 scripts/bundle.py rendercv_output
 
       - name: Setup Node.js
         uses: actions/setup-node@v4
