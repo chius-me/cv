@@ -52,14 +52,12 @@ cv:
           - "通过 WireGuard 构建覆盖移动设备、HomeLab、AWS 及阿里云的私有网络，通过 Cloudflare 对外暴露服务。"
           - "TrueNAS 配置 ZFS RAIDZ1 保障数据安全，部署 MinIO 提供 S3 兼容对象存储。"
           - "以 Forgejo 为内网 Git 中枢，Forgejo Actions + ArgoCD 对接 Kubernetes，实现 GitOps 全自动交付。"
-      - name: 项目二（占位，请替换）
+      - name: Serverless 系列
         highlights:
-          - "项目简介（占位，请替换）。"
-          - "技术细节（占位，请替换）。"
-      - name: 项目三（占位，请替换）
-        highlights:
-          - "项目简介（占位，请替换）。"
-          - "技术细节（占位，请替换）。"
+          - "favicon-fisher: Favicon 抓取与识别服务 — github.com/chius-me/favicon-fisher"
+          - "ddnsgo-webhook: DDNS 变更通知转发至 Telegram / DingTalk / 飞书 — github.com/chius-me/ddnsgo-webhook"
+          - "uptime-worker: Serverless 服务可用性监控 — github.com/chius-me/uptime-worker"
+          - "whoami: curl whoami.chius.cc 展示个人名片 — github.com/chius-me/whoami"
 
     比赛经历:
       - name: 全国大学生集成电路创新创业大赛（算能杯）
@@ -72,11 +70,11 @@ cv:
           - "题目《基于 FPGA 的音源处理系统设计与实现》，队长，负责功能开发与文档整理。"
 
     课程设计:
-      - name: SpringBoot + Vue Web 项目开发
+      - name: SpringBoot + Vue 初级 Web 项目开发
         date: 2024-07
         highlights:
           - "独立完成仓库管理系统的全栈开发与部署。"
-      - name: Flask + Kotlin 移动端 AI 应用
+      - name: Flask + Kotlin 移动端 AI 应用开发
         date: 2025-07
         highlights:
           - "负责后端 API 与公网反向代理部署，为 Android 客户端提供 AI 服务接口。"
