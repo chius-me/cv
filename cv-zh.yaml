@@ -3,7 +3,6 @@ cv:
   name: Yao Chius
   headline: 通信工程本科生 · 软件开发者 · HomeLabber · Linux 狂热爱好者
   photo: avatar-circle.png
-  location: 山东 青岛
   email: contact@chius.cc
   custom_connections:
     - fontawesome_icon: link
@@ -37,7 +36,7 @@ cv:
       - label: AI Agent
         details: opencode, Hermes Agent, Multica, Codex
       - label: 自建/私有
-        details: Forgejo, Forgejo Actions, ArgoCD, Kubernetes, Proxmox VE, TrueNAS
+        details: Forgejo, ArgoCD, Kubernetes, Proxmox VE, TrueNAS
       - label: SaaS
         details: GitHub, Cloudflare, AWS/GCP/阿里云
       - label: 英语能力
