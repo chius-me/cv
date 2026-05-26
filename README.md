@@ -1,3 +1,1 @@
-# cv
-
-Yao Chius 的简历，使用 [RenderCV](https://github.com/rendercv/rendercv) 生成。
+这里是 Chius 的简历，使用 [RenderCV](https://github.com/rendercv/rendercv) 生成。

@@ -1,4 +1,5 @@
 rendercv_output/
+.venv/
 
 .cache/
 __pycache__/

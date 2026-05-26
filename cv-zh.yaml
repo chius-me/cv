@@ -67,7 +67,7 @@ locale:
   language: mandarin_chinese
 
 design:
-  theme: ink
+  theme: engineeringresumes
 
 settings:
   render_command:
