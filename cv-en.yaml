@@ -5,15 +5,18 @@ cv:
   photo: avatar-circle.png
   location: QingDao ShangDong
   email: contact@chius.cc
-  website: https://chius.cc/
-  social_networks:
-    - network: GitHub
-      username: chius-me
-    - network: LinkedIn
-      username: chius-me
   custom_connections:
+    - fontawesome_icon: link
+      placeholder: ""
+      url: https://chius.cc/
+    - fontawesome_icon: github
+      placeholder: ""
+      url: https://github.com/chius-me
+    - fontawesome_icon: linkedin
+      placeholder: ""
+      url: https://linkedin.com/in/chius-me
     - fontawesome_icon: blog
-      placeholder: "blog.chius.cc"
+      placeholder: ""
       url: https://blog.chius.cc/
   sections:
     education:
