@@ -45,58 +45,41 @@ cv:
         details: 自动化运维、开源软件、自托管程序
 
     个人项目:
-      - name: HomeLab 网络与虚拟化平台
+      - name: HomeLab 混合云平台
         date: 2024 – present
         highlights:
-          - "自建家庭数据中心，运行 Proxmox VE 虚拟化平台，托管十余个容器与虚拟机。"
-          - "配置完整的网络拓扑：VLAN 隔离、DNS 广告过滤、反向代理与内网穿透。"
-          - "部署 GitLab CI/CD 流水线，实现个人项目自动化构建与部署。"
+          - "基于 Proxmox VE 搭建家庭数据中心，运行二十余台虚拟机与上百容器。"
+          - "通过 WireGuard 构建覆盖移动设备、HomeLab、AWS 及阿里云的私有网络，通过 Cloudflare 对外暴露服务。"
+          - "TrueNAS 配置 ZFS RAIDZ1 保障数据安全，部署 MinIO 提供 S3 兼容对象存储。"
+          - "以 Forgejo 为内网 Git 中枢，Forgejo Actions + ArgoCD 对接 Kubernetes，实现 GitOps 全自动交付。"
       - name: 项目二（占位，请替换）
-        date: 2024
         highlights:
           - "项目简介（占位，请替换）。"
           - "技术细节（占位，请替换）。"
       - name: 项目三（占位，请替换）
-        date: 2023
         highlights:
           - "项目简介（占位，请替换）。"
           - "技术细节（占位，请替换）。"
 
-    课程设计:
-      - name: 课程设计一（占位，请替换）
-        date: 2025-06
-        highlights:
-          - "项目简介：做了什么，用什么技术栈（占位，请替换）。"
-          - "个人贡献：负责了哪部分，实现了什么功能（占位，请替换）。"
-      - name: 课程设计二（占位，请替换）
-        date: 2024-12
-        highlights:
-          - "项目简介：做了什么，用什么技术栈（占位，请替换）。"
-          - "个人贡献：负责了哪部分，实现了什么功能（占位，请替换）。"
-
-    开源贡献:
-      - name: 项目名称（占位，请替换）
-        date: 2024 – present
-        highlights:
-          - "贡献类型：代码贡献 / 文档翻译 / Bug 修复（占位，请替换）。"
-          - "具体工作：提交了 N 个 PR，解决了什么问题（占位，请替换）。"
-      - name: 项目名称（占位，请替换）
-        date: 2024 – present
-        highlights:
-          - "贡献类型：代码贡献 / 文档翻译 / Bug 修复（占位，请替换）。"
-          - "具体工作：提交了 N 个 PR，解决了什么问题（占位，请替换）。"
-
     比赛经历:
-      - name: 比赛名称（占位，请替换）
-        date: 2025
+      - name: 全国大学生集成电路创新创业大赛（算能杯）
+        date: 2026
         highlights:
-          - "比赛简介 + 个人角色（占位，请替换）。"
-          - "所做工作 + 最终成绩（占位，请替换）。"
-      - name: 比赛名称（占位，请替换）
-        date: 2024
+          - "作品《基于 AMP 实时架构的反馈式导盲杖 —— Globi-V》，队长，负责 AI 模型训练、端侧移植与 Flutter 客户端开发。"
+      - name: 大学生创新创业大赛
+        date: "2024 – 2026"
         highlights:
-          - "比赛简介 + 个人角色（占位，请替换）。"
-          - "所做工作 + 最终成绩（占位，请替换）。"
+          - "题目《基于 FPGA 的音源处理系统设计与实现》，队长，负责功能开发与文档整理。"
+
+    课程设计:
+      - name: SpringBoot + Vue Web 项目开发
+        date: 2024-07
+        highlights:
+          - "独立完成仓库管理系统的全栈开发与部署。"
+      - name: Flask + Kotlin 移动端 AI 应用
+        date: 2025-07
+        highlights:
+          - "负责后端 API 与公网反向代理部署，为 Android 客户端提供 AI 服务接口。"
 
 locale:
   language: mandarin_chinese
