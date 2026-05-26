@@ -29,7 +29,7 @@ cv:
         highlights:
           - "核心课程：C/C++、计算机网络、数据结构、Linux 嵌入式、人工智能模型与算法"
 
-    技能:
+    技术能力:
       - label: 编程语言
         details: Shell, Go, Python, C, JavaScript
       - label: 开发工具
