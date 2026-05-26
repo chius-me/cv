@@ -5,7 +5,9 @@ on:
     branches:
       - main
     paths:
-      - cv.yaml
+      - cv-en.yaml
+      - cv-zh.yaml
+      - scripts/**
       - wrangler.toml
       - src/**
       - .github/workflows/deploy.yml
@@ -56,28 +58,13 @@ jobs:
         run: |
           set -euo pipefail
           . .venv/bin/activate
-          rendercv render cv.yaml
+          rendercv render cv-en.yaml
+          rendercv render cv-zh.yaml --output-folder rendercv_output/zh
 
-      - name: Prepare root PDF page
+      - name: Inject language switcher
         run: |
           set -euo pipefail
-          cat > rendercv_output/index.html <<'HTML'
-          <!doctype html>
-          <html lang="en">
-            <head>
-              <meta charset="utf-8">
-              <meta name="viewport" content="width=device-width, initial-scale=1">
-              <title>Yao Chius CV</title>
-              <style>
-                html, body { height: 100%; margin: 0; }
-                iframe { border: 0; height: 100%; width: 100%; }
-              </style>
-            </head>
-            <body>
-              <iframe src="Yao_Chius_CV.pdf" title="Yao Chius CV"></iframe>
-            </body>
-          </html>
-          HTML
+          python3 scripts/inject-lang-switcher.py rendercv_output
 
       - name: Setup Node.js
         uses: actions/setup-node@v4

@@ -1,0 +1,77 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/rendercv/rendercv/refs/tags/v2.8/schema.json
+cv:
+  name: Yao Chius
+  headline: 计算机科学本科生
+  photo: avatar-circle.png
+  location: 山东青岛
+  email: contact@chius.cc
+  social_networks:
+    - network: GitHub
+      username: chius-me
+    - network: LinkedIn
+      username: chius-me
+  sections:
+    education:
+      - institution: 中国石油大学
+        area: 计算机科学
+        degree: 工学学士
+        location: 青岛, 中国
+        start_date: 2023-09
+        end_date: present
+        highlights:
+          - "研究方向：分布式系统、可复现基础设施与开发者工具。"
+          - "相关课程：高级操作系统、机器学习、研究方法论。"
+    research_experience:
+      - company: 系统研究实验室, Example 大学
+        position: 研究助理
+        location: 城市, 国家
+        start_date: 2024-09
+        end_date: present
+        highlights:
+          - "设计实验评估异构工作负载下构建系统的性能表现。"
+          - "构建可复现的分析笔记，在每周研究会议上总结结果。"
+          - "与两位研究生合作撰写内部技术报告。"
+    publications:
+      - title: "《可复现开发者基础设施的占位研究》"
+        authors:
+          - Yao Chius
+          - Alex Example
+          - Casey Researcher
+        doi: 10.0000/example.2026.001
+        date: 2026-05
+        journal: Proceedings of the Example Systems Workshop
+    projects:
+      - name: 研究工件模板
+        date: 2025
+        highlights:
+          - "创建了一个模板仓库，用于打包数据集、脚本和实验元数据。"
+          - "文档化了配置步骤，使其他研究者能在一台干净机器上复现结果。"
+      - name: 文献综述追踪器
+        date: 2024
+        highlights:
+          - "按主题、方法、数据集和开放问题整理论文笔记。"
+          - "使用结构化摘要比较相关系统论文中的假设差异。"
+    skills:
+      - label: 研究
+        details: 文献综述、实验设计、技术写作、可复现性
+      - label: 编程
+        details: Python、Bash、Git、LaTeX、SQL
+      - label: 工具
+        details: Linux、Docker、Jupyter、CI/CD、RenderCV
+    e_card:
+      - "```bash"
+      - "$ curl whoami.chius.cc"
+      - "```"
+
+locale:
+  language: mandarin_chinese
+
+design:
+  theme: ink
+
+settings:
+  render_command:
+    output_folder: rendercv_output
+    dont_generate_html: false
+    dont_generate_markdown: false
+    dont_generate_png: true

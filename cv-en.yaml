@@ -1,6 +1,8 @@
 # yaml-language-server: $schema=https://raw.githubusercontent.com/rendercv/rendercv/refs/tags/v2.8/schema.json
 cv:
   name: Yao Chius
+  headline: CS Undergraduate
+  photo: avatar-circle.png
   location: QingDao ShangDong
   email: contact@chius.cc
   social_networks:
@@ -61,8 +63,11 @@ cv:
       - "$ curl whoami.chius.cc"
       - "```"
 
+locale:
+  language: english
+
 design:
-  theme: classic
+  theme: ink
 
 settings:
   render_command:
