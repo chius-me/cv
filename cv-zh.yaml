@@ -35,9 +35,9 @@ cv:
         details: Vim, Git, Docker, GitHub Actions
       - label: AI Agent
         details: opencode, Hermes Agent, Multica, Codex
-      - label: 自建/私有
+      - label: Selfhost
         details: Forgejo, ArgoCD, Kubernetes, Proxmox VE, TrueNAS
-      - label: SaaS
+      - label: SaaS / PaaS
         details: GitHub, Cloudflare, AWS/GCP/阿里云
       - label: 英语能力
         details: CET-6
